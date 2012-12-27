@@ -1,0 +1,47 @@
+apply plugin: 'scala'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "eu.lieback.anisort.Launcher"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+
+	compile 'commons-io:commons-io:2.4'
+	compile 'org.slf4j:slf4j-api:1.6.6'
+	compile 'ch.qos.logback:logback-classic:1.0.7'
+	compile 'org.scalatest:scalatest_2.9.1:2.0.M6-SNAP4'
+
+  compile 'org.scala-lang:scala-compiler:2.9.1'
+  compile 'org.scala-lang:scala-library:2.9.1'
+
+  scalaTools 'org.scala-lang:scala-compiler:2.9.1'
+  scalaTools 'org.scala-lang:scala-library:2.9.1'
+}
+
+/*buildscript {
+  repositories{
+    maven{
+      url "https://raw.github.com/rodionmoiseev/maven-repo/master/repo/releases"
+    }
+  }
+  dependencies {
+    classpath group: 'org.rodion.gradle', name: 'idea-scala-plugin', version: '0.2'
+  }
+}
+
+apply plugin: 'idea-scala-project'
+
+repositories{
+  mavenCentral()
+}
+
+
+dependencies{
+  scalaApi 'org.scala-lang:scala-library:2.9.1'
+  scalaTools 'org.scala-lang:scala-library:2.9.1'
+  scalaTools 'org.scala-lang:scala-compiler:2.9.1'
+}*/
